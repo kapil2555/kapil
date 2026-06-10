@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" empname="" id="name" placeholder="enter name">
+    <br><br>
+    <input type="number" empid="" id="num" placeholder="enter id">
+    <br><br>
+    <input type="time" emptime="" id="time" placeholder="enter time">
+    <br><br>
+    <button onclick="getdata()">ENTER</button>
+    <h1 id="msg"></h1>
+  <script>
+    function getdata()
+    {
+        var msg=document.getElementById("msg")
+        var a=document.getElementById("name")
+        var b=document.getElementById("num")
+        var c=document.getElementById("time")
+
+        if(c.value<"12:00")
+    {
+        msg.innerHTML="good morning ."
+    }
+    else if(c.value>="12:00" && c.value<="20:00")
+    {
+        msg.innerHTML="good afternoon "
+    }
+    else 
+    {
+        msg.innerHTML="it's a night shift!"
+    }
+    }
+  </script>  
+</body>
+</html>

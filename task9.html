@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login form</h1>
+    <input type="text" name="" id="user" placeholder="enter username">
+    <br><br>
+    <input type="password" name="" id="pass" placeholder="enter password">
+    <button onclick="getdata()">LOGIN</button>
+    <h1 id="msg"></h1>
+
+    <script>
+        var chances=3;
+        function getdata()
+        
+        {
+            var msg=document.getElementById("msg")
+            var a=document.getElementById("user")
+            var b=document.getElementById("pass")
+             if (chances > 0) {
+                if (a.value == "kapil" && b.value == "123") {
+                    msg.innerHTML = "Login successful! Hello " + a.value;
+                } 
+                else 
+                {
+                    chances = chances - 1;
+                    msg.innerHTML = "Login failed! Try again. Chances left: " + chances;
+                }
+
+            } 
+            else 
+            {
+                msg.innerHTML = "Multiple failed attempts. Your account is temporarily blocked!";
+            }
+        }
+        
+        
+
+        
+    </script>
+</body>
+</html>
